@@ -12,7 +12,7 @@
 
 <meta name="author" content="Bella Vakulenko-Lagun, Micha Mandel and Rebecca A. Betensky" />
 
-<meta name="date" content="2018-10-06" />
+<meta name="date" content="2019-01-03" />
 
 <title>Cox Regression for Right Truncated Data</title>
 
@@ -69,8 +69,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <h1 class="title toc-ignore">Cox Regression for Right Truncated Data</h1>
-<h4 class="author"><em>Bella Vakulenko-Lagun, Micha Mandel and Rebecca A. Betensky</em></h4>
-<h4 class="date"><em>2018-10-06</em></h4>
+<h4 class="author"><em><a href="https://scholar.harvard.edu/blagun">Bella Vakulenko-Lagun</a>, <a href="https://en.stat.huji.ac.il/people/moshe-chaviv">Micha Mandel</a> and <a href="https://publichealth.nyu.edu/faculty/rebecca-betensky">Rebecca A. Betensky</a></em></h4>
+<h4 class="date"><em>2019-01-03</em></h4>
 
 
 
@@ -293,7 +293,7 @@ start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()
 }
 end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()
 end_time <span class="op">-</span><span class="st"> </span>start_time <span class="co"># It takes some time to solve nonlinear estimating equations and to run bootstrap for each value of a0 ...</span></code></pre></div>
-<pre><code>## Time difference of 1.939433 mins</code></pre>
+<pre><code>## Time difference of 2.2345 mins</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggplot2)
 res.d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a0=</span><span class="kw">c</span>(<span class="dv">0</span>, a_), <span class="dt">beta=</span><span class="kw">c</span>(sol<span class="op">$</span>coef, est),
                    <span class="dt">L.95=</span><span class="kw">c</span>(sol<span class="op">$</span>summary<span class="op">$</span>CI.L, CI.L), <span class="dt">U.95=</span><span class="kw">c</span>(sol<span class="op">$</span>summary<span class="op">$</span>CI.U, CI.U))
@@ -423,7 +423,7 @@ Figure 7. Sensitivity analysis for AIDS data
 <p>Kalbfeisch, J. D., and J. F. Lawless. 1989. “Inference Based on Retrospective Ascertainment: An Analysis of the Data on Transfusion-Related AIDS.” <em>Journal of the American Statistical Association</em> 84 (406): 360–72.</p>
 </div>
 <div id="ref-RT">
-<p>Vakulenko-Lagun, B., M. Mandel, and R. A. Betensky. 2018. “Inverse-Probability-Weighting Methods for Cox Regression with Right Truncated Data.” <em>Submitted to Biometrics</em>.</p>
+<p>Vakulenko-Lagun, B., M. Mandel, and R. A. Betensky. 2018. “Inverse-Probability-Weighting Methods for Cox Regression with Right Truncated Data.” <em>Submitted</em>.</p>
 </div>
 </div>
 </div>

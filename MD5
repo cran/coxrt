@@ -1,4 +1,4 @@
-2a0eabec77ab05dd75e5d7ab0e616ea7 *DESCRIPTION
+d00a108dfff3ba2b213f5d9c887d1699 *DESCRIPTION
 9515b87ad6951e08b28e2084af4aa65e *NAMESPACE
 f73276f54be201023c38630e13550c20 *R/RcppExports.R
 6302b72bda58dd33a00978133de84425 *R/coxrt.R
@@ -6,16 +6,16 @@ f73276f54be201023c38630e13550c20 *R/RcppExports.R
 c37379f470e74e69c7731eff245c91e1 *README.md
 2921d1247bc8984bfd066e62f4985040 *build/vignette.rds
 ab0738c56385ecb2d376106c0656e85b *inst/doc/coxrt-vignette.R
-674ade33cfa5c8ab56d62123c869dda9 *inst/doc/coxrt-vignette.Rmd
-a489493ca5e8bf1e3ee934238ef54d03 *inst/doc/coxrt-vignette.html
+2181bbcf38e34e39ac510e5ab5922f3f *inst/doc/coxrt-vignette.Rmd
+c7db77844547d6e348cb78208ab6d4c3 *inst/doc/coxrt-vignette.html
 111cdc3736b0f4a26895b4470d0aab28 *man/coxph.RT.Rd
 2884c749a183ed0d10e95eb487a4ce59 *man/coxph.RT.a0.Rd
 f11b87be20159a187bc3b6577b0211f1 *man/coxrt.Rd
 13b03cd3dd721948c30479759060bb49 *src/Makevars
 13b03cd3dd721948c30479759060bb49 *src/Makevars.win
-c68a1e07056aca2b4a2c9558ab2e2151 *src/RT_IPW_functions.cpp
+537b0314008fbe70a5f600534d28e892 *src/RT_IPW_functions.cpp
 91096bff26bd9cf8c9b5238f07d23618 *src/RcppExports.cpp
-674ade33cfa5c8ab56d62123c869dda9 *vignettes/coxrt-vignette.Rmd
+2181bbcf38e34e39ac510e5ab5922f3f *vignettes/coxrt-vignette.Rmd
 95b4ff4fdafb97d9415e6e833fa0810d *vignettes/densTpTsRp.png
-dd73f9c3adf411b15bb7c119efe83dbe *vignettes/references.bib
+a24f2966c37c328bc78c9a7fa3f7947c *vignettes/references.bib
 1a31c04334e087ae25825589fe1ea3a9 *vignettes/slide1.png
