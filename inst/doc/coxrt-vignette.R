@@ -1,7 +1,7 @@
-## ----fig1, echo=FALSE, label=fig1, fig.cap="Figure 1. Illustration of retrospective ascertainment of AIDS cases", out.width = '100%'----
-    knitr::include_graphics('slide1.png')
+## ----fig1, echo=FALSE, label=fig1, fig.cap="Figure 1. Illustration of retrospective ascertainment of AIDS cases", out.width = '80%'----
+    knitr::include_graphics('slide1_116.png')
 
-## ----fig2, echo=FALSE, fig.cap="Figure 2. Right truncation causes distortion of the original distribution of T", out.width = '70%'----
+## ----fig2, echo=FALSE, fig.cap="Figure 2. Right truncation causes distortion of the original distribution of T", out.width = '60%'----
     knitr::include_graphics('densTpTsRp.png')
 
 ## ----fig.height=4, fig.width=4, fig.align='center',  fig.cap="Figure 3. Two sub-populations defined by a covariate Z."----
@@ -95,8 +95,9 @@ set.seed(0)
 library(gss)
 library(coxrt)
 data(aids)
-s <- data.frame(age=aids$age, ageg=as.numeric(aids$age<=4), T=aids$incu, R=aids$infe)
-s$T[s$T==0] <- 0.5 # as in Kalbfeisch and Lawless (1989)
+all <- data.frame(age=aids$age, ageg=as.numeric(aids$age<=59), T=aids$incu, R=aids$infe, hiv.mon =102-aids$infe)
+all$T[all$T==0] <- 0.5 # as in Kalbfeisch and Lawless (1989)
+s <- all[all$hiv.mon>60,] # select those who were infected in 1983 or later
 # analysis assuming positivity
 # we request bootstrap estimate of Asymptotic Standard Error (ASE) as well:
 sol <- try(coxph.RT(T~ageg, right=R, data=s, bs=TRUE, nbs.rep=500) )
