@@ -28,6 +28,7 @@
 #' @import gss
 #' @import ggplot2
 #' @importFrom stats pnorm qnorm quantile sd var
+#' @importFrom Rcpp evalCpp
 #' @useDynLib coxrt, .registration = TRUE
 #'
 #' @docType package

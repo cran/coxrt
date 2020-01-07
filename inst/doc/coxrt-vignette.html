@@ -13,7 +13,7 @@
 
 <meta name="author" content="Bella Vakulenko-Lagun, Micha Mandel and Rebecca A. Betensky" />
 
-<meta name="date" content="2019-07-31" />
+<meta name="date" content="2020-01-05" />
 
 <title>Cox regression for right-truncated data</title>
 
@@ -96,11 +96,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Cox regression for right-truncated data</h1>
 <h4 class="author"><a href="https://scholar.harvard.edu/blagun">Bella Vakulenko-Lagun</a>, <a href="https://en.stat.huji.ac.il/people/moshe-chaviv">Micha Mandel</a> and <a href="https://publichealth.nyu.edu/faculty/rebecca-betensky">Rebecca A. Betensky</a></h4>
-<h4 class="date">2019-07-31</h4>
+<h4 class="date">2020-01-05</h4>
 
 
 
-<p>The <code>coxrt</code> package accompanies the paper of <span class="citation">Vakulenko-Lagun, Mandel, and Betensky (2019)</span> and is designed for analysis of right-truncated data.</p>
+<p>The <code>coxrt</code> package accompanies the paper of <a href="https://doi.org/10.1111/biom.13162">Vakulenko-Lagun, Mandel and Betensky (2019)</a> and is designed for analysis of right-truncated data.</p>
 <div id="what-are-right-truncated-data" class="section level2">
 <h2>What are right-truncated data?</h2>
 <p>When we are interested in the analysis of lifetimes that start at an initiating event and end up when an event of interest occurs, but we cannot obtain a population of interest to follow them prospectively, retrospective ascertainment of cases could be a good alternative. However, this might result in right-truncated survival data.</p>
@@ -130,8 +130,9 @@ Figure 2. Right truncation causes distortion of the original distribution of T
 <h2>Why is it important to adjust for right truncation in regression?</h2>
 <p>Even if we do not aim to estimate the whole distribution and are interested only in estimation of the effects of some covariates on the incubation period, we still need to adjust for right truncation, since, as we illustrate below, the right truncation blurs the difference between subgroups.</p>
 <p>Suppose we have one binary covariate <span class="math inline">\(Z\)</span>. Figure 3 shows distributions in the two subpopulations defined by <span class="math inline">\(Z\)</span>. The lifetime <span class="math inline">\(T\)</span> is generated from the proportional hazard regression model <span class="math inline">\(h(t;z)=h_0(t)\exp(\beta z)\)</span> with <span class="math inline">\(\beta=2\)</span>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
-<span class="kw">library</span>(survival)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)</code></pre></div>
+<pre><code>## Warning: package 'ggplot2' was built under R version 3.6.2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(survival)
 <span class="kw">set.seed</span>(<span class="dv">17</span>)
 N &lt;-<span class="st"> </span><span class="dv">20000</span>
 Z &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">runif</span>(N,<span class="dv">0</span>,<span class="dv">1</span>) <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.5</span>)             <span class="co"># binary explanatory variable     </span>
@@ -320,7 +321,7 @@ start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()
 }
 end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()
 end_time <span class="op">-</span><span class="st"> </span>start_time <span class="co"># It takes some time to solve nonlinear estimating equations and to run bootstrap for each value of a0 ...</span></code></pre></div>
-<pre><code>## Time difference of 25.87758 secs</code></pre>
+<pre><code>## Time difference of 20.17705 secs</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggplot2)
 res.d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a0=</span><span class="kw">c</span>(<span class="dv">0</span>, a_), <span class="dt">beta=</span><span class="kw">c</span>(sol<span class="op">$</span>coef, est),
                    <span class="dt">L.95=</span><span class="kw">c</span>(sol<span class="op">$</span>summary<span class="op">$</span>CI.L, CI.L), <span class="dt">U.95=</span><span class="kw">c</span>(sol<span class="op">$</span>summary<span class="op">$</span>CI.U, CI.U))
@@ -450,7 +451,7 @@ Figure 7. Sensitivity analysis for AIDS data
 <p>Kalbfeisch, J. D., and J. F. Lawless. 1989. “Inference Based on Retrospective Ascertainment: An Analysis of the Data on Transfusion-Related AIDS.” <em>Journal of the American Statistical Association</em> 84 (406): 360–72.</p>
 </div>
 <div id="ref-RT">
-<p>Vakulenko-Lagun, B., M. Mandel, and R. A. Betensky. 2019. “Inverse Probability Weighting Methods for Cox Regression with Right-Truncated Data.” <em>Submitted</em>.</p>
+<p>Vakulenko-Lagun, B., M. Mandel, and R. A. Betensky. 2019. “Inverse Probability Weighting Methods for Cox Regression with Right-Truncated Data.” <em>Biometrics</em>. <a href="https://doi.org/10.1111/biom.13162" class="uri">https://doi.org/10.1111/biom.13162</a>.</p>
 </div>
 </div>
 </div>

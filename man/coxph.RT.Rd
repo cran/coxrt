@@ -22,7 +22,7 @@ confidence interval,
 and confidence upper and lower limits for one-sided confidence intervals
 based on the bootstrap distribution are calculated. The default value is \code{FALSE}.}
 
-\item{nbs.rep}{number of bootstrap replications. The default number is 200.}
+\item{nbs.rep}{number of bootstrap replications. The default number is 500.}
 
 \item{conf.int}{The confidence level for confidence intervals and hypotheses tests.
 The default level is 0.95.}

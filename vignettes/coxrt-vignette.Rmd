@@ -10,7 +10,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-The  `coxrt` package accompanies the paper of @RT and is designed for analysis of right-truncated data.
+The  `coxrt` package accompanies the paper of [Vakulenko-Lagun, Mandel and Betensky (2019)](https://doi.org/10.1111/biom.13162) and is designed for analysis of right-truncated data.
 
 
 ## What are right-truncated data?

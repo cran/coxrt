@@ -56,7 +56,7 @@
 #' confidence interval,
 #' and confidence upper and lower limits for one-sided confidence intervals
 #' based on the bootstrap distribution are calculated. The default value is \code{FALSE}.
-#' @param nbs.rep number of bootstrap replications. The default number is 200.
+#' @param nbs.rep number of bootstrap replications. The default number is 500.
 #' @param conf.int The confidence level for confidence intervals and hypotheses tests.
 #' The default level is 0.95.
 #'
@@ -390,7 +390,7 @@ coxph.RT.a0 <-function(formula, right, data, a0=0, bs=FALSE, nbs.rep=200, conf.i
   w.simple <- sapply(X, .get.S, time=ti, surv=S.NA)
   # get the initial estimate of beta for BBsolve
   srv.trunc <- survival::Surv(X, event=delta)
-  sol <- try(survival::coxph(srv.trunc ~ Z +offset(-log(w.simple)), data = obj) )
+  sol <- try(survival::coxph(srv.trunc ~ Z + offset(-log(w.simple)), data = obj) )
   if (class(sol)!="coxph") {
     cat("coxph.RT: Error occurred. ", sol,"\n")
   }
